@@ -3,6 +3,7 @@
 import ollama
 import subprocess
 
+
 def get_staged_files():
     """Gets the list of staged files."""
     try:
@@ -11,7 +12,7 @@ def get_staged_files():
         return staged_files if staged_files[0] else None
     except Exception as e:
         return [f"Error getting staged files: {str(e)}"]
-
+    
 def get_staged_diff():
     """Gets the Git diff of staged changes."""
     try:
@@ -34,10 +35,9 @@ def generate_commit_message(diff):
 
     **Rules:**
     - Keep it under **40 characters**.
-    - Use an **imperative tone** (e.g., "Add [file]", "Remove [file]", "Add [feature]", "Fix [bug]", "Refactor [code]").
+    - Use an **imperative tone** (e.g., "Add file", "Add feature", "Fix bug", "Refactor login system").
     - **Only return the commit message** with no extra words.
 
-    
 
     **Only return the commit message, nothing else.**
     """
@@ -47,7 +47,7 @@ def generate_commit_message(diff):
         commit_message = response['message']['content'].strip()
 
         # Ensure the response isn't empty or malformed
-        if not commit_message:
+        if not commit_message :
             return "Auto-generated commit"
 
         return commit_message
@@ -57,16 +57,16 @@ def generate_commit_message(diff):
 
 def main():
     """CLI tool to generate Git commit messages from staged changes."""
-    staged_files = get_staged_files()
     git_diff = get_staged_diff()
+    staged_files = get_staged_files()
 
-    if not staged_files:
+    if not git_diff:
         print("No staged changes found. Please stage changes using `git add .`")
         return
-
+    
     print("\n📂 **Staged Files:**\n")
     for file in staged_files:
-        print(f"  - {file}")  # Display staged files
+      print(f"  - {file}")
 
     commit_message = generate_commit_message(git_diff)
 
