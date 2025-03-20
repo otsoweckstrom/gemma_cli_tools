@@ -23,13 +23,9 @@ def generate_commit_message(diff):
 
     **Rules:**
     - Keep it under **40 characters**.
-    - Use an **imperative tone** (e.g., "Fix bug", "Refactor login system").
+    - Use an **imperative tone** (e.g., "Add file", "Remove file", "Add feature", "Fix bug", "Refactor login system").
     - **Only return the commit message** with no extra words.
 
-    **Example Output:**  
-      Fix checkout page validation  
-      Update API response handling  
-      Optimize query performance  
 
     **Only return the commit message, nothing else.**
     """
