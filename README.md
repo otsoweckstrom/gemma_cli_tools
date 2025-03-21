@@ -61,3 +61,39 @@ Writing good commit messages is time-consuming and repetitive. Developers often 
 - Developers who want fast, meaningful commits
 - Git users working offline (Gemma runs locally!)
 - Anyone too lazy to type "Fix stupid bug in helper again"
+
+## 🧩 Bonus Tools Included
+
+### 🔹 `clinky`: AI-Powered CLI Command Generator
+A helper script that translates natural language into macOS/Linux terminal commands using Gemma 3:1B.
+
+```bash
+python clinky.py "delete a folder named test"
+```
+
+**Output:**
+```bash
+Suggested command: rm -r test
+Proceed? (y/n):
+```
+
+- ✅ Designed for macOS/Linux, runs locally  
+- ⚠️ Commands are executed only if confirmed by the user
+
+---
+
+### 🔹 `gemma-parse-html`: CSS Selector Extractor from HTML
+Uses Gemma to guess the most relevant CSS selector from a given HTML file and target element description.
+
+```bash
+python gemma-parse-html.py path/to/page.html --target "product price"
+```
+
+**Output:**
+```
+Best CSS Selector: .product-price
+```
+
+- ✅ Great for scraping workflows or automated testing  
+- ⚠️ Accuracy depends on page structure and LLM reasoning
+
