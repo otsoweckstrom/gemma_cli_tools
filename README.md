@@ -17,8 +17,11 @@ Writing good commit messages sucks. Let the AI do it. It's fast, local, and does
    bash ollama pull gemma3:1b
    
 Clone this repo & move the tool to a global path:
+
 chmod +x gemma-commit
+
 sudo mv gemma-commit /usr/local/bin/
+
 
 Usage:
 
@@ -36,6 +39,7 @@ Limitations:
 Relies on Gemma 3:1B, which is small and sometimes imprecise
 
 Commit message quality can vary
+
 
 Potential Improvements:
 
