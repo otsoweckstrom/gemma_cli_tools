@@ -34,11 +34,17 @@ Usage:
 Limitations:
 
 Relies on Gemma 3:1B, which is small and sometimes imprecise
+
 Commit message quality can vary
 
 Potential Improvements:
+
 Add multi-model support (e.g. Mixtral, LLaMA3)
+
+Train the model with a large set of real commit messages
+
 Allow message tweaking before commit
+
 VS Code integration
 
 
