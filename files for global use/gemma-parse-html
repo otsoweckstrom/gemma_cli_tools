@@ -21,7 +21,7 @@ def extract_page_structure(html_content):
     # Extract sample element structures
     elements = soup.find_all(True)
     sample_structure = "\n".join(
-        [str(el) for el in elements[:10]]  # Send first 10 elements as context
+        [str(el) for el in elements[:10]] 
     )
 
     return sample_structure
