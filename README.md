@@ -22,7 +22,11 @@ sudo mv gemma-commit /usr/local/bin/
 
 Usage:
 
-<pre lang="markdown"> ```bash git add . gemma-commit-msg Example Output: 📂 **Staged Files:** - main.py - utils/helper.py 💡 Suggested Commit Message: "Refactor helper logic" Proceed with this commit? (y/n): ``` </pre>
+<pre lang="markdown"> ```bash git add . 
+   gemma-commit-msg 
+   Example Output: 📂 **Staged Files:** - main.py - utils/helper.py 
+   💡 Suggested Commit Message: "Refactor helper logic" 
+   Proceed with this commit? (y/n): ``` </pre>
 
 Limitations:
 Relies on Gemma 3:1B, which is small and sometimes imprecise
