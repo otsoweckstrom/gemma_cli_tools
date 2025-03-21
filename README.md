@@ -32,6 +32,7 @@ Usage:
    Proceed with this commit? (y/n):  </pre>
 
 Limitations:
+
 Relies on Gemma 3:1B, which is small and sometimes imprecise
 Commit message quality can vary
 
