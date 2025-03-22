@@ -94,6 +94,17 @@ python gemma-parse-html.py path/to/page.html --target "product price"
 Best CSS Selector: .product-price
 ```
 
-- ✅ Great for scraping workflows or automated testing  
+  
 - ⚠️ Accuracy depends on page structure and LLM reasoning
 
+## Community feedback
+
+u/rajdar
+Train Gemma to write Conventional Commit messages https://www.deployhq.com/blog/conventional-commits-a-standardized-approach-to-commit-messages
+
+u/schmurfy2
+Why do we need to have AI everywhere ?
+That's an interesting toy project but I would be really worried if this is really used...
+
+u/alfrheim
+AI is a tool, naming and messages are things most people struggle. Having a helping hand is useful.
