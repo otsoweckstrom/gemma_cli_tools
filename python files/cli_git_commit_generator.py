@@ -5,7 +5,7 @@ import subprocess
 def get_staged_files():
     """Gets the list of staged files."""
     try:
-        result = subprocess.run(["git", "diff", "--name-only", "--staged"], capture_output=True, text=True)
+        result = subprocess.run(["git", "diff", "--name-only", "--staged"], capture_output=True, text=True,  encoding='utf-8')
         staged_files = result.stdout.strip().split("\n")
         return staged_files if staged_files[0] else None
     except Exception as e:
@@ -14,7 +14,7 @@ def get_staged_files():
 def get_staged_diff():
     """Gets the Git diff of staged changes."""
     try:
-        result = subprocess.run(["git", "diff", "--staged"], capture_output=True, text=True)
+        result = subprocess.run(["git", "diff", "--staged"], capture_output=True, text=True,    encoding='utf-8' )
         git_diff = result.stdout.strip()
         return git_diff if git_diff else None
     except Exception as e:
@@ -73,7 +73,7 @@ def main():
     confirm = input("\nProceed with this commit? (y/n): ").strip().lower()
     
     if confirm == "y":
-        subprocess.run(["git", "commit", "-m", commit_message])
+        subprocess.run(["git", "commit", "-m", commit_message], encoding='utf-8')
         print("✅ Commit created!")
     else:
         print("❌ Commit canceled.")
